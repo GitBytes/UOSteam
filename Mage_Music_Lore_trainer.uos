@@ -1,0 +1,58 @@
+while not dead
+  organizer 'MageMats'
+  pause 3000
+  if skill 'magery' != 100
+    if not @findtype 0xeb2 0x0 'backpack' and skill 'musicianship' < 100
+      headmsg 'Get more lap harps!'
+    elseif skill 'musicianship' < 100
+      usetype 0xeb2 0x0 'backpack'
+    endif
+    if skill 'Animal Lore' < 100
+      useskill 'Animal Lore'
+      waitfortarget 15000
+      target! 0xa65f9
+      waitforgump 0x934529aa 15000
+      replygump 0x934529aa 0
+    endif
+    if mana < 35
+      while mana != maxmana
+        useskill 'meditation'
+        pause 7000
+      endwhile
+    endif
+    if skill 'magery' <= 30
+      headmsg 'Buy more skill!'
+      stop
+    elseif skill 'magery' >= 45 and skill 'magery' <= 54.9
+      cast 'bless' 'self'
+      pause 1000
+    elseif skill 'magery' >= 55 and skill 'magery' <= 62.8
+      cast 'mana drain' 'self'
+      pause 1000
+    elseif skill 'magery' >= 62.9 and skill 'magery' <= 89.9
+      cast 'invisibility' 'self'
+      pause 1000
+    elseif skill 'magery' >= 90
+      cast 'mana vampire' 'self'
+      pause 1000
+    else
+      headmsg 'Magery complete!'
+      stop
+    endif
+  elseif skill 'resisting spells' != 100
+    if @injournal 'Insufficient mana' 'system'
+      clearjournal
+      while mana != maxmana
+        useskill 'meditation'
+        pause 5000
+      endwhile
+    else
+      cast 'mana vampire' 'self'
+      pause 1000
+    endif
+  else
+    headmsg 'Magery and resisting spells complete!'
+    stop
+  endif
+  pause '3000'
+endwhile

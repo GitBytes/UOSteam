@@ -1,0 +1,9 @@
+useskill 'provocation'
+waitfortarget 2500
+target! 'last'
+getenemy 'gray' 'criminal' 'enemy' 'murderer' 'nearest'
+if graphic 'enemy' == 0xa4
+  getenemy 'gray' 'criminal' 'enemy' 'nearest'
+endif
+waitfortarget 2500
+target! 'enemy'

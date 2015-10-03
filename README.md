@@ -7,7 +7,7 @@ Personal UOSteam Script Repo
   * PvP - Scripts focused on defense or offensive Player vs. Player Combat
   * Skill Training - For the noobs to get off the ground or to expand your horizons
 
-## Other places to find scripts from other talented players
+## Script libraries by other talented players
 
 [The Foaming Squirrels UOS Script Library](http://dfiexperience.wix.com/foamingsquirrels#!steam/c24dh "TFS UOS Script Library")
 

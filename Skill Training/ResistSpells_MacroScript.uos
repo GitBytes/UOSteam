@@ -83,7 +83,7 @@ while not dead
     if mana < 45
       while mana != maxmana
         useskill 'meditation'
-        pause 7000
+        pause 8000
       endwhile
     endif
   endwhile

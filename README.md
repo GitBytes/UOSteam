@@ -12,3 +12,7 @@ Personal UOSteam Script Repo
 [The Foaming Squirrels UOS Script Library](http://dfiexperience.wix.com/foamingsquirrels#!steam/c24dh "TFS UOS Script Library")
 
 [GreedUO UOS Script Library](http://greeduo.wix.com/uomacro#!macros-for-uosteam/c1kh5 "GreedUO UOS Script Library")
+
+## UOSteam Syntax Guide
+
+[The Foaming Squirrels UOS Guide Link](http://uosteam.28394.n7.nabble.com/file/n65/Documentation.pdf "TFS UOS Guide Link")

@@ -77,7 +77,7 @@ endif
 //
 ///////////////////
 while not dead
-  while counter 'mdr' >= 5
+  while counter 'mdr' >= 10
     cast 'mana vampire' 'self'
     pause 2000
     if mana < 45

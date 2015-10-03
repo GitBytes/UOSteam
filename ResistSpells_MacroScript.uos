@@ -1,0 +1,112 @@
+///////////////////
+//
+// This is an efficient macro script for making "Resist Spells" skill gains.
+//
+// Requirements Include:
+// * GM Magery - Example Script: http://www.github.com/gitbytes/uosteam
+// * Restock Agent titled 'regs to bag'
+// * Counter for Mandrake Root (mdr)
+// * Secure lock box where you can automate the restocking of Reagents
+// * Bag within your secure container which holds a large amount (4k) of
+//   1. Mandrake Root
+//   2. Black Peral
+//   3. Blood Moss
+//   4. Spider Silk
+// * Rune Book with default location set to reagent restock location
+// * Rune Book with default location set to training spot, preferrably dungeon
+//
+///////////////////
+//
+// You will need to setup a restock agent titled 'regs to bag' in order for
+// the script to work out of the box. Make sure it is very focused on the
+// liste reagents above. I like to do 100 of each necessary for script
+// to function
+//
+///////////////////
+//
+// You will need to setup a counter for Mandrake Root and define the format as // 'mdr' in order for the script to serve you properrly out of the box.
+//
+///////////////////
+//
+// Need to setup a runebook with a default recall location to someplace (house)
+// with a source of reagents at your fingertips (front porch chest/bag).
+// Select that runebook here
+//
+///////////////////
+if not findalias 'Home RuneBook'
+  headmsg 'Select a home runebook'
+  promptalias 'Home RuneBook'
+endif
+///////////////////
+//
+// Then setup another runebook with a different default recall location to a
+// place to train (dungeon).
+// Select that runebook here.
+//
+///////////////////
+if not findalias! 'Dungeon RuneBook'
+  headmsg 'Select a dungeon runebook'
+  promptalias 'Dungeon RuneBook'
+endif
+///////////////////
+//
+// You need to be located where you can access your main container (secured)
+// located to where you can recall to.
+// Select the secured container source here.
+//
+///////////////////
+if not findalias! 'Reagent Source Outer'
+  headmsg 'Select a Large container with a bag of reagents in it'
+  promptalias 'Reagent Source Outer'
+endif
+///////////////////
+//
+// You need to be located where you can access the main container.
+// Select an inner bag source with a large number of resources
+// (Mandrake Root, Black Pearl, Blood Moss, Spider Silk).
+// Select that inner bag resource here.
+//
+///////////////////
+if not findalias! 'Reagent Source Inner'
+  headmsg 'Select a small container with reagents in it within the large container'
+  promptalias 'Reagent Source Inner'
+endif
+///////////////////
+//
+// Now, let the magic loop run its course
+//
+///////////////////
+while not dead
+  while counter 'mdr' >= 5
+    cast 'mana vampire' 'self'
+    pause 2000
+    if mana < 45
+      while mana != maxmana
+        useskill 'meditation'
+        pause 7000
+      endwhile
+    endif
+  endwhile
+  cast "Recall"
+  waitfortarget 15000
+  target! 'Home RuneBook' //Home RuneBook
+  pause 2000
+  useobject 'Reagent Source Outer' //Outer Large Container
+  pause 1400
+  useobject 'Reagent Source Inner' //Inner Small Reagent Bag
+  pause 1400
+  organizer 'regs to bag'
+  pause 11000
+  cast "Recall"
+  waitfortarget 15000
+  target! 'Dungeon RuneBook' //Dungeon Runebook
+  pause 2000
+  if skill 'resisting spells' == 100
+    cast "Recall"
+    waitfortarget 15000
+    target! 'Home RuneBook' //Home RuneBook
+    pause 2000
+    headmsg 'Resisting spells complete!'
+    stop
+  endif
+endwhile

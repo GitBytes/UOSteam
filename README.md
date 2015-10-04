@@ -16,3 +16,6 @@ Personal UOSteam Script Repo
 ## UOSteam Syntax Guide
 
 [The Foaming Squirrels UOS Guide Link](http://uosteam.28394.n7.nabble.com/file/n65/Documentation.pdf "TFS UOS Guide Link")
+
+## UO Forever Guild URL - Join us on [UO Forever](http://www.uoforever.com/ "UOF Home") - F2P
+[The Foaming Squirrels](http://www.thefoamingsquirrels.co.nr/ "The Foaming Squirrels Homepage")

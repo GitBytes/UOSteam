@@ -89,22 +89,22 @@ while not dead
   endwhile
   cast "Recall"
   waitfortarget 15000
-  target! 'Home RuneBook' //Home RuneBook
+  target! 'Home RuneBook'
   pause 2000
-  useobject 'Reagent Source Outer' //Outer Large Container
+  useobject 'Reagent Source Outer'
   pause 1400
-  useobject 'Reagent Source Inner' //Inner Small Reagent Bag
+  useobject 'Reagent Source Inner'
   pause 1400
   organizer 'regs to bag'
-  pause 11000
+  pause 9000
   cast "Recall"
   waitfortarget 15000
-  target! 'Dungeon RuneBook' //Dungeon Runebook
+  target! 'Dungeon RuneBook'
   pause 2000
   if skill 'resisting spells' == 100
     cast "Recall"
     waitfortarget 15000
-    target! 'Home RuneBook' //Home RuneBook
+    target! 'Home RuneBook'
     pause 2000
     headmsg 'Resisting spells complete!'
     stop

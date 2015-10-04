@@ -1,11 +1,18 @@
-# UOSteam Script Library
-Personal UOSteam Script Repo
+UOSteam Script Library
+----------------------
+# Personal UOSteam Script Repo
 
 ## Areas of Interest
   * Economy - Scripts focused on producing goods
   * PvE - Scripts focused on fighting the evil monsters in Britannia
   * PvP - Scripts focused on defense or offensive Player vs. Player Combat
   * Skill Training - For the noobs to get off the ground or to expand your horizons
+
+## UO Forever/Guild URL
+
+Join us on [UO Forever](http://www.uoforever.com/ "UOF Home") - F2P
+
+[The Foaming Squirrels Guild Information](http://www.thefoamingsquirrels.co.nr/ "The Foaming Squirrels Homepage")
 
 ## Script libraries by other talented players
 
@@ -15,7 +22,5 @@ Personal UOSteam Script Repo
 
 ## UOSteam Syntax Guide
 
-[The Foaming Squirrels UOS Guide Link](http://uosteam.28394.n7.nabble.com/file/n65/Documentation.pdf "TFS UOS Guide Link")
+[The Foaming Squirrels UOS Reference Guide Link](http://uosteam.28394.n7.nabble.com/file/n65/Documentation.pdf "TFS UOS Guide Link")
 
-## UO Forever Guild URL - Join us on [UO Forever](http://www.uoforever.com/ "UOF Home") - F2P
-[The Foaming Squirrels](http://www.thefoamingsquirrels.co.nr/ "The Foaming Squirrels Homepage")
